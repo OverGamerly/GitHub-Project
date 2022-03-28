@@ -4,19 +4,30 @@ using namespace std;
 
 int main()
 {
-	int* firstNumb = new int;
-	int* secondNumb = new int;
+	int* numbArray = new int[4];
+	int* maxNumb = new int;
 
-	cout << "Enter firts numb: ";
-	cin >> *firstNumb;
+	*maxNumb = 0;
 
-	cout << "Enter second numb: ";
-	cin >> *secondNumb;
+	for (int i = 0; i < 4; i++)
+	{
+		cout << "Enter your " << i << " number: ";
+		cin >> maxNumb[i];
+	}
 
-	cout << "Max numb: " << (*firstNumb > *secondNumb ? *firstNumb : *secondNumb);
+	for (int i = 0; i < 4; i++)
+	{
+		if (numbArray[i] > *maxNumb)
+		{
+			*maxNumb = numbArray[i];
+		}
+	}
 	
-	delete firstNumb;
-	delete secondNumb;
+	
+	cout << "Max numb: " << *maxNumb;
+	
+	delete[] numbArray;
+	delete maxNumb;
 
 	return 0;
 }
