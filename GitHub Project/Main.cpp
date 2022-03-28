@@ -12,7 +12,7 @@ int main()
 	for (int i = 0; i < 4; i++)
 	{
 		cout << "Enter your " << i << " number: ";
-		cin >> maxNumb[i];
+		cin >> numbArray[i];
 	}
 
 	for (int i = 0; i < 4; i++)
