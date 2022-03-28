@@ -14,6 +14,9 @@ int main()
 	cin >> *secondNumb;
 
 	cout << "Max numb: " << (*firstNumb > *secondNumb ? *firstNumb : *secondNumb);
+	
+	delete firstNumb;
+	delete secondNumb;
 
 	return 0;
 }
